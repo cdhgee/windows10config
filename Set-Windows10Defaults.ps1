@@ -4,6 +4,14 @@ Param()
 Function main {
 
   $script:basepath = (Get-Location).Path
+
+  If (-not ([System.Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([System.Security.Principal.WindowsBuiltInRole]::Administrator))
+  {   
+    $arguments = "& '" + $myinvocation.mycommand.definition + "'"
+    Start-Process powershell -Verb runAs -ArgumentList $arguments
+    Break
+  }
+
   $modules = Get-ChildItem -Path "$($script:basepath)/modules" -Filter "*.psm1"
 
   Foreach($module in $modules){
