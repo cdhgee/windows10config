@@ -13,6 +13,7 @@ Function main {
   Foreach($module in $modules){
     $msg = Invoke-ModuleFunction -Module $module.Basename -Function "Get-Description"
     Write-Host $msg
+    Invoke-ModuleFunction -Module $module.Basename -Function "Set-Configuration"
   }
   
 
