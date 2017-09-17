@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-  <setting name="default apps">
+  <setting group="default apps">
     <entry value="Microsoft.MicrosoftOfficeHub" />
     <entry value="Microsoft.ZuneVideo" />
     <entry value="Microsoft.3DBuilder" />
@@ -29,5 +29,9 @@
     <entry value="PandoraMediaInc.29680B314EFC2" />
     <entry value="Microsoft.MicrosoftPowerBIForWindows" />
     <entry value="ActiproSoftwareLLC.562882FEEB491" />
+  </setting>
+  <setting group="privacy">
+    <entry name="HKLM:\Software\Microsoft\PolicyManager\default\Wifi\AllowWifiHotSpotReporting" type="DWord" value="0" description="Disable wi-fi sense" />
+    <entry name="HKLM:\Software\Microsoft\PolicyManager\default\Wifi\AllowAutoConnectToWifiSenseHotspots" type="DWord" value="0" description="Disable wi-fi sense" />
   </setting>
 </config>
