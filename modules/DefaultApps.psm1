@@ -12,6 +12,6 @@ Function Set-Configuration {
   [CmdletBinding()]
   Param()
 
-  Get-Setting -Name "default apps" | Get-AppXPackage | Remove-AppXPackage
+  Get-Setting -Name "default apps" | Select -ExpandProperty Value | Get-AppXPackage | Remove-AppXPackage
 }
 

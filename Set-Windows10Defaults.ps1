@@ -57,7 +57,7 @@ Function Get-Setting {
     $script:config = [xml](Get-Content -Path "$PSScriptRoot/config/config.xml" -Encoding utf8)
   }
 
-  ($script:config.config.setting | Where { $_.name -eq $name }).entry.value
+  ($script:config.config.setting | Where { $_.name -eq $name }).entry
 }
 
 main
