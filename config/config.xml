@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <setting name="default apps">
+    <entry value="Microsoft.MicrosoftOfficeHub" />
+    <entry value="Microsoft.ZuneVideo" />
+    <entry value="Microsoft.3DBuilder" />
+    <entry value="Microsoft.BingFinance" />
+    <entry value="Microsoft.BingNews" />
+    <entry value="Microsoft.BingSports" />
+    <entry value="Microsoft.Office.OneNote" />
+    <entry value="Microsoft.Office.Sway" />
+    <entry value="Microsoft.SkypeApp" />
+    <entry value="Microsoft.GetStarted" />
+    <entry value="Microsoft.WindowsMaps" />
+    <entry value="Microsoft.ZuneMusic" description="Groove Music" />
+    <entry value="Microsoft.Messaging" />
+    <entry value="Microsoft.XBoxApp" />
+    <entry value="Microsoft.ConnectivityStore" description="Microsoft Wi-Fi" />
+    <entry value="Microsoft.Windows.Photos" />
+    <entry value="6Wunderkinder.Wunderlist" />
+    <entry value="Flipboard.Flipboard" />
+    <entry value="46928bounde.EclipseManager" />
+    <entry value="D5EA27B7.Duolingo-LearnLanguagesforFree" />
+    <entry value="AdobeSystemsIncorporated.AdobePhotoshopExpress" />
+    <entry value="Microsoft.FreshPaint" />
+    <entry value="Microsoft.BingTranslator" />
+    <entry value="9E2F88E3.Twitter" />
+    <entry value="Facebook.Facebook" />
+    <entry value="PandoraMediaInc.29680B314EFC2" />
+    <entry value="Microsoft.MicrosoftPowerBIForWindows" />
+    <entry value="ActiproSoftwareLLC.562882FEEB491" />
+  </setting>
+</config>

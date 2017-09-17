@@ -7,8 +7,8 @@ Function main {
 
   If (-not ([System.Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([System.Security.Principal.WindowsBuiltInRole]::Administrator))
   {   
-    $arguments = "& '" + $myinvocation.mycommand.definition + "'"
-    Start-Process powershell -Verb runAs -ArgumentList $arguments -NoNewWindow
+    $arguments = "& '$PSCommandPath'"
+    Start-Process powershell -Verb runAs -ArgumentList $arguments
     Break
   }
 
@@ -42,6 +42,22 @@ Function Invoke-ModuleFunction {
   $verb, $rest = $Function -split "-"
   $reststring = $rest -join "-"
   & "$verb-$Module$reststring"
+}
+
+Function Get-Setting {
+
+  [CmdletBinding()]
+  Param(
+    [Parameter(Mandatory=$true)]
+    [ValidateNotNullOrEmpty()]
+    $Name
+  )
+
+  If($script:config -eq $null){
+    $script:config = [xml](Get-Content -Path "$PSScriptRoot/config/config.xml" -Encoding utf8)
+  }
+
+  ($script:config.config.setting | Where { $_.name -eq $name }).entry.value
 }
 
 main
